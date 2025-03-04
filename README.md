@@ -37,25 +37,32 @@ Maven (Building Java Lambda)
 
 📂 Folder Structure
 
+# AWS S3 Lambda CSV Processor
+
+## Project Structure
+
+```text
 aws-s3-lambda-csv-processor/
-│── cdk/
-│   ├── bin/
-│   │    ├── cdk-app.ts  // CDK Entry Point
-│   ├── lib/
-│   │    ├── lambda-stack.ts  // Stack with S3 + Lambda
-│   ├── cdk.json
-│   ├── tsconfig.json
-│   ├── package.json
 │
-│── lambda/
+├── cdk/                                  # CDK Infrastructure (TypeScript)
+│   ├── bin/
+│   │    ├── cdk-app.ts                    # CDK Entry Point
+│   ├── lib/
+│   │    ├── lambda-stack.ts               # CDK Stack defining S3, Lambda, and event trigger
+│   ├── cdk.json                           # CDK configuration
+│   ├── tsconfig.json                      # TypeScript configuration
+│   ├── package.json                       # Project dependencies
+│
+├── lambda/                               # Java Lambda Function
 │   ├── CsvProcessorLambda/
 │   │   ├── src/main/java/com/example/
-│   │   │   ├── CsvProcessor.java  // Java Lambda Code
-│   │   ├── pom.xml  // Maven Dependencies
+│   │   │   ├── CsvProcessor.java          # Java Lambda function that reads CSV headers
+│   │   ├── pom.xml                        # Maven configuration for building the Lambda JAR
 │
-│── target/
-│   ├── s3-lambda-processor-1.0-SNAPSHOT.jar  // Packaged Java Lambda
+├── target/                               # Output directory for packaged Lambda JAR
+│   ├── s3-lambda-processor-1.0-SNAPSHOT.jar  # Packaged Lambda JAR ready for deployment
 
+```
 
 🛠️ Deployment Steps
 
