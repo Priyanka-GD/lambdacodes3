@@ -81,9 +81,13 @@ Check Lambda Logs in CloudWatch
 📌 Key Features
 
 ✅ Automatic Processing: CSV files uploaded to S3 are automatically processed.
+
 ✅ Serverless & Scalable: Uses AWS Lambda for efficient event-driven processing.
+
 ✅ AWS CDK Infrastructure as Code (IaC): Enables easy deployment & management.
+
 ✅ Java-Based Lambda: Uses AWS SDK to fetch & read files dynamically.
+
 ✅ CloudWatch Logging: Logs extracted CSV headers for monitoring & debugging.
 
 🔥 Next Steps / Enhancements
