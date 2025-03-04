@@ -1,0 +1,21 @@
+{
+  "name": "cdk-s3-lambda",
+  "version": "1.0.0",
+  "description": "CDK project to create an S3 bucket and Lambda trigger using TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "cdk deploy",
+    "synth": "cdk synth",
+    "destroy": "cdk destroy"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.128.0",
+    "constructs": "^10.2.64"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "aws-cdk": "^2.128.0"
+  }
+}

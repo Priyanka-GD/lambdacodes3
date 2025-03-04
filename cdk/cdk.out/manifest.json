@@ -1,0 +1,125 @@
+{
+  "version": "39.0.0",
+  "artifacts": {
+    "S3LambdaStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "S3LambdaStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "S3LambdaStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "S3LambdaStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/5d1bfd32a3df4face8b98a02dd851e360adfab11fa3a021b1e94390ce4e98e41.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "S3LambdaStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "S3LambdaStack.assets"
+      ],
+      "metadata": {
+        "/S3LambdaStack/CsvBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CsvBucketADDA1E74"
+          }
+        ],
+        "/S3LambdaStack/CsvBucket/Notifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CsvBucketNotificationsF537981F"
+          }
+        ],
+        "/S3LambdaStack/CsvBucket/AllowBucketNotificationsToS3LambdaStackCsvProcessorLambda71766149": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CsvBucketAllowBucketNotificationsToS3LambdaStackCsvProcessorLambda717661490449A9A6"
+          }
+        ],
+        "/S3LambdaStack/CsvProcessorLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CsvProcessorLambdaServiceRole0E4E21EE"
+          }
+        ],
+        "/S3LambdaStack/CsvProcessorLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CsvProcessorLambdaServiceRoleDefaultPolicy999287E9"
+          }
+        ],
+        "/S3LambdaStack/CsvProcessorLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CsvProcessorLambdaDFE3AFE0"
+          }
+        ],
+        "/S3LambdaStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+          }
+        ],
+        "/S3LambdaStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36"
+          }
+        ],
+        "/S3LambdaStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691"
+          }
+        ],
+        "/S3LambdaStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/S3LambdaStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/S3LambdaStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/S3LambdaStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "S3LambdaStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
