@@ -107,3 +107,6 @@ Implement S3 lifecycle policies to clean up old CSV files automatically.
 
 This project provides a fully automated and scalable solution to process CSV files in AWS using S3, Lambda (Java), and AWS CDK. 
 It demonstrates a serverless, event-driven architecture for real-world data processing.
+
+<img width="796" alt="image" src="https://github.com/user-attachments/assets/7b0d0cf9-44bd-4768-a560-8129bc45aa45" />
+
